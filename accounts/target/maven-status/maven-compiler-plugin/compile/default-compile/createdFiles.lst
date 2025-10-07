@@ -1,0 +1,6 @@
+com\example\accounts\messaging\AccountEvents.class
+com\example\accounts\config\KafkaConfig.class
+com\example\accounts\AccountsApplication.class
+com\example\accounts\api\AccountController.class
+com\example\accounts\config\SecurityConfig.class
+com\example\accounts\service\CustomerClient.class

@@ -1,0 +1,3 @@
+com\example\customers\api\CustomerController.class
+com\example\customers\CustomersApplication.class
+com\example\customers\SecurityConfig.class

@@ -1,0 +1,29 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: accounts
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:9000
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka
+resilience4j:
+  circuitbreaker:
+    instances:
+      customers:
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+  retry:
+    instances:
+      customers:
+        maxAttempts: 3
+        waitDuration: 500ms
+  bulkhead:
+    instances:
+      customers:
+        maxConcurrentCalls: 5

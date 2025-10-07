@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: accounts
+          uri: http://accounts:8081
+          predicates: [ Path=/api/accounts/** ]
+        - id: customers
+          uri: http://customers:8082
+          predicates: [ Path=/api/customers/** ]
+    discovery:
+      enabled: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:9000

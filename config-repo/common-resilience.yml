@@ -1,0 +1,5 @@
+resilience4j:
+  timelimiter:
+    instances:
+      default:
+        timeoutDuration: 2s
